@@ -3,6 +3,9 @@ import random
 import streamlit as st
 from datetime import datetime, date,time
 from random import randint
+def local_css(file_name):
+      with open(file_name) as f:
+          st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 def need_break():
     c=st.beta_container()
     c.header("Take a break")
@@ -27,3 +30,46 @@ def need_break():
           cap = c.button("Submit", key="submit")
           if cap==True:
            c.success("Time submitted")
+def need_break_home():
+	st.title("Request for a break")
+	mm2 = st.empty()
+	local_css("survey.css")
+
+	col22,col23=mm2.beta_columns(2)
+	with col22:
+		button_clicked1 = st.button("Request Time Off")
+		
+		  # mm.empty()
+		  # mm2.empty()
+
+	with col23:
+		button_clicked2 = st.button("Time off Scheduler")
+		
+
+	
+
+	if button_clicked1:
+		  sai()
+
+	if button_clicked2:
+		  tos()
+
+
+
+
+
+		  # mm.empty()
+
+
+def sai():
+	c=st.beta_container()
+	form = st.form(key='my_form')
+	form.text_input(label="Enter your time")
+	c=form.selectbox('Reason for Leave', ['Illness', 'Vacction','Others'], key=1)
+	if c=="Others":
+		form.text_input(label="Enter your reason")
+	form.text_area(label="Enter Description Optional")
+	submit = form.form_submit_button('Submit')
+	
+def tos():
+	st.title("To be devloped")
