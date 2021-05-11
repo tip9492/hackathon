@@ -5,7 +5,9 @@ from datetime import datetime, date,time
 from random import randint
 def need_break():
     c=st.beta_container()
-    c.header("Request for a break or change in timings")
+    c.header("Take a break")
+
+    # c.header("Request for a break or change in timings")
     r=c.selectbox("Select below",options=['Flexi-Time','Change shift'])
     if r=="Flexi-Time":
         c.slider("Please select in hours the time you will be away from the keyboard",min_value=0.5,max_value=8.0,step=0.5)

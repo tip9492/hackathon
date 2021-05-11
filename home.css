@@ -1,0 +1,16 @@
+div.element-container:nth-child(1) span {
+  text-align: center;
+}
+div.element-container:nth-child(1) button  {
+    color: rgb(246, 51, 102);
+    border-radius: 5%;
+    height: 15em;
+    width: 20em;
+    font-weight: bold;
+    font-size: 1em;
+    border-color: rgb(246, 51, 102);
+}
+
+header {
+  text-align: center;
+}

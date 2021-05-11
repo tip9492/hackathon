@@ -12,6 +12,6 @@ def header():
 		"Take a Break": need_break
 	}
 	menu = [ "Home","Survey", "Learning", "Take a Break"]
-	choice_st = st.empty()
+	choice_st = st.sidebar
 	choice = choice_st.selectbox("Menu",menu)
 	mapping[choice]()
