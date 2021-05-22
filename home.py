@@ -45,6 +45,7 @@ def first():
   st.title("E.A.P")
   mm=st.empty()
   mm2=st.empty()
+  mm3=st.empty()
   col12,col13=mm.beta_columns(2)
   with col12:
     button_clicked1 = st.button("HOME")
@@ -74,3 +75,16 @@ def first():
     if button_clicked4:
       need_break()
       # mm.empty()
+      
+  col32,col33=mm3.beta_columns(2)
+  with col32:
+    button_clicked3 = st.button("MEETING ASSISTANT")
+    if button_clicked3:
+      learning()
+      # mm.empty()
+      # mm2.empty()
+ 
+  with col33:
+    button_clicked4 = st.button("INSTANT CHAT")
+    if button_clicked4:
+      need_break()
